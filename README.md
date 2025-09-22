@@ -49,5 +49,4 @@ Running the script prints all extracted data types clearly labeled.
 
 ## Author
 
-Prince NDAHIRO  
-p.ndahiro1@alustudent.com
+Prince NDAHIRO
