@@ -26,7 +26,7 @@ This project extracts 5 common data types from text using Python regular express
 
 ## Files
 
-- `extractor.py` — Main Python script for data extraction.
+- `regex_data_extractor.py` — Main Python script for data extraction.
 - `test_cases.txt` — Sample input for testing all extractors.
 - `README.md` — Project documentation and instructions.
 
