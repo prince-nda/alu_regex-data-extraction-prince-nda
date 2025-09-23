@@ -30,12 +30,32 @@ if __name__ == "__main__":
     email:prince.nda@example.com james.nda@example.co.uk
     visit: https://www.example.com https://subdomain.example.org/page
     card:1234 5678 9012 3456, 1234-5678-9012-3456, 1234567890123567, 1234 5678 9013
-    event time at 14:30 or 2:30 PM. and 09:15 am
+    event time at 14:30 or 2:30 PM. and 08:25 am
     HTML: <p> <div class="example"> <img src="image.jpg" alt="description">
     """
 
-    print("Emails:", extract_emails(sample))
-    print("URLs:", extract_urls(sample))
-    print("Credit cards:", extract_credit_cards(sample))
-    print("Times:", extract_times(sample))
-    print("HTML tags:", extract_html_tags(sample))
+    print("========== ALU REGEX DATA EXTRACTION =========\n")
+    
+    print("Emails:")
+    for email in extract_emails(sample):
+        print(" -", email)  
+    print()
+    
+    print("URLs:")
+    for url in extract_urls(sample):
+        print(" -", url)
+    print()
+    
+    print("Credit cards:")
+    for card in extract_credit_cards(sample):
+        print(" -", card)
+    print()
+    
+    print("Times:")
+    for t in extract_times(sample):
+        print(" -", t)
+    print()
+
+    print("HTML tags:")
+    for tag in extract_html_tags(sample):
+        print(" -", tag)
