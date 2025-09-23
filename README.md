@@ -19,7 +19,7 @@ This project extracts 5 common data types from text using Python regular express
 
 2. **Run the extractor:**
    ```bash
-   python3 extractor.py
+   python3 extractor.py or ./extractor.py
    ```
 
    You can also test with your own text by editing `sample` in `extractor.py` or using `test_cases.txt`.
