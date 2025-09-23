@@ -1,6 +1,8 @@
 Emails:
 user@example.com
 firstname.lastname@company.co.uk
+prince.nda@example.com 
+james.nda@example.co.uk
 
 URLs:
 https://www.example.com
@@ -9,6 +11,8 @@ https://subdomain.example.org/page
 Credit cards:
 1234 5678 9012 3456
 1234-5678-9012-3456
+1234567890123567
+1234 5678 9013
 
 Time:
 14:30 
