@@ -26,6 +26,15 @@ def extract_html_tags(text):
     """Extract HTML tags from text."""
     return re.findall(r'<[^>]+>', text)
 
+def print_matches(title, matches):
+    print(f"{title}:")
+    if matches:
+        for m in matches:
+            print(" -", m)
+    else:
+        print(" - No valid entry found")
+    print()
+
 if __name__ == "__main__":
     sample = """ 
     email:prince.nda@example.com james.nda@example.co.uk
@@ -37,26 +46,21 @@ if __name__ == "__main__":
 
     print("========== ALU REGEX DATA EXTRACTION =========\n")
     
-    print("Emails:")
-    for email in extract_emails(sample):
-        print(" -", email)  
-    print()
+    print("sample text validation\n")
+    print_matches("Emails", extract_emails(sample))
+    print_matches("URLs", extract_urls(sample))
+    print_matches("Credit Cards", extract_credit_cards(sample))
+    print_matches("Times", extract_times(sample))
+    print_matches("HTML Tags", extract_html_tags(sample))
     
-    print("URLs:")
-    for url in extract_urls(sample):
-        print(" -", url)
-    print()
+    print("\n------------------------------------\n")
     
-    print("Credit cards:")
-    for card in extract_credit_cards(sample):
-        print(" -", card)
-    print()
-    
-    print("Times:")
-    for t in extract_times(sample):
-        print(" -", t)
-    print()
+    user_input = input("Enter your text to validate: ")
+    print("== User Input Validation ==\n")
+    print_matches("Emails", extract_emails(user_input))
+    print_matches("URLs", extract_urls(user_input))
+    print_matches("Credit Cards", extract_credit_cards(user_input))
+    print_matches("Times", extract_times(user_input))
+    print_matches("HTML Tags", extract_html_tags(user_input))
+ 
 
-    print("HTML tags:")
-    for tag in extract_html_tags(sample):
-        print(" -", tag)
